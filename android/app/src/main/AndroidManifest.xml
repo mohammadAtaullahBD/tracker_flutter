@@ -5,7 +5,7 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:name=".Application"
+            android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
@@ -30,15 +30,5 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <receiver   android:name="com.webstersys.geofence.geofence.GeofenceBroadcastReceiver"
-                android:enabled="true"
-                android:exported="true" />
-        <service android:name="com.webstersys.geofence.geofence.GeofenceTransitionsJobIntentService" android:enabled="true" android:exported="true"
-                    android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <receiver android:name="com.webstersys.geofence.BootDeviceReceiver">
-                    <intent-filter>
-                        <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                    </intent-filter>
-        </receiver>
     </application>
 </manifest>
